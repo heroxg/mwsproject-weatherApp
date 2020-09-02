@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather-APP</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <div class="content-container">
+                <header>
+                    <img src="images/logo.png" alt="logo" />
+                </header>
+                <div class="main-content">
+                    <div class="search-sec">
+                        <div class="search-wrap">
+                            <input type="text" placeholder="Enter a city"> 
+                            <button>Get weather Update</button>
+                        </div>
+                    </div>
+                    <div class="search-result-sec">
+                        <div class="weather-card">
+                            <h5>It is winter in NYC now</h5>
+                            <div class="now-info">
+                                <img src="images/sun.png" alt="sunset" />
+                                <h1>37<sup>0</sup></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function resize_container() {
+            var height = $(window).height(),
+                container = $('.content-wrapper');
+
+            container.css('height', height);
+            }
+
+            $(window).resize(resize_container);
+        </script>
+    </body>
+</html>
