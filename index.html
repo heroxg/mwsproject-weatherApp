@@ -7,7 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
         <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="content-wrapper">
@@ -16,18 +18,27 @@
                     <img src="images/logo.png" alt="logo" />
                 </header>
                 <div class="main-content">
-                    <div class="search-sec">
-                        <div class="search-wrap">
-                            <input type="text" placeholder="Enter a city"> 
-                            <button>Get weather Update</button>
+                    <div class="search-container">
+                        <div class="search-sec">
+                            <div class="search-wrap">
+                                <input type="text" placeholder="Enter a city" class="search-box"> 
+                                <button type="submit" class="search-btn">Get weather Update</button>
+                            </div>
                         </div>
                     </div>
                     <div class="search-result-sec">
-                        <div class="weather-card">
-                            <h5>It is winter in NYC now</h5>
-                            <div class="now-info">
-                                <img src="images/sun.png" alt="sunset" />
-                                <h1>37<sup>0</sup></h1>
+                        <div class="weather-container">
+                            <div class="weather-card">
+                                <section class="location">
+                                    <div class="current-update"></div>
+                                    <!-- <div class="city"></div> -->
+                                    <div class="date"></div>
+                                </section>
+                                <div class="current">
+                                    <div class="temp"></div>
+                                    <div class="weather"></div>
+                                    <div class="hi-low"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -44,6 +55,27 @@
             }
 
             $(window).resize(resize_container);
+        </script>
+        <script src="js/main.js"></script>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }  
+
+            // if('serviceWorker' in navigator) {
+            //   navigator.serviceWorker
+            //            .register('/sw.js')
+            //            .then(function() { console.log("Service Worker Registered"); });
+            // }
         </script>
     </body>
 </html>

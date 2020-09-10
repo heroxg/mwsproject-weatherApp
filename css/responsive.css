@@ -1,0 +1,54 @@
+@media screen and (max-width: 800px) {
+    .search-container {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 700px) {
+    .search-container {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .search-sec input[type="text"] {
+        width: 60%;
+    }
+    .search-sec button {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .search-container {
+        max-width: 450px;
+    }
+    .search-sec input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 4px 4px 4px 4px;
+    }
+    .search-sec button {
+        width: 100%;
+        border-radius: 4px 4px 4px 4px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .weather-container {
+        max-width: 320px
+    }
+}
+@media screen and (max-width: 450px) {
+    .search-container {
+        max-width: 380px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .search-container {
+        max-width: 310px;
+    }
+    .weather-container {
+        max-width: 310px
+    }
+}

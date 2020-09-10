@@ -72,11 +72,16 @@ header {
     width: 100%;
     margin-top: 30px;
 }
+.weather-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 440px;
+}
 .weather-card {
     background: #fff;
     float: left;
-    width: 45%;
-    padding: 10px;
+    width: 100%;
+    /* padding: 10px; */
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -97,4 +102,43 @@ header {
     padding-right: 30px;
     font-size: 80px;
     line-height: 0px;
+}
+ul li {
+    list-style: none;
+  }
+.location {
+    padding: 15px 15px 0px 15px
+}
+.current {
+    padding: 0px 15px 0px 15px
+}
+.temp p, .hi-low p {
+    float: left;
+    width: 40%;
+    font-size: 20px;
+}
+.temp span.temp-degree, .hi-low span.weather-degree {
+    float: right;
+    width: 60%;
+}
+span.weather-degree {
+    font-size: 24px;
+}
+span.temp-degree {
+    font-size: 24px;
+}
+.current-update p {
+    font-size: 26px;
+    text-align: center;
+}
+.date  {
+    font-size: 18px;
+    text-align: center;
+    margin-top: -16px;
+}
+.temp {
+    text-align: center;
+}
+.hi-low {
+    text-align: center;
 }
